@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #C2B791;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
+}
+
+.header-left {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Иконка Telegram */
+.telegram-icon {
+  width: 42px;
+  height: 39px;
+}
+
+.telegram-icon img {
+  width: 42px;
+  height: 39px;
+}
+
+/* Иконка Discord */
+.discord-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.discord-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Иконка TikTok */
+.tiktok-icon {
+  width: 48px;
+  height: 39px;
+}
+
+.tiktok-icon img {
+  width: 48px;
+  height: 39px;
+}
+
+/* Кнопки в хедере */
+.header-buttons {
+  display: flex;
+  gap: 21px;
+  margin-left: auto;
+}

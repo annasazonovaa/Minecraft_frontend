@@ -1,0 +1,151 @@
+/* auth.css */
+
+.auth-container {
+    min-height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../Assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.auth-card {
+  width: 70vh;
+  height: 70vh;
+
+  background-color: #D6BF98;
+  border-radius: 16px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.input-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  height: 60px;
+
+  background-color: #EEE8D0;
+  border: 2px solid #000;
+  border-radius: 10px;
+
+  padding: 0 20px;
+  font-size: 18px;
+  font-family: "Minecraft Rus", sans-serif;
+
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@font-face {
+  font-family: "Minecraft Rus";
+  src: url("../Assets/MinecraftRus.ttf") format("truetype");
+}
+
+.auth-title {
+  font-size: 40px;
+  font-family: "Minecraft Rus", sans-serif;
+  margin-bottom: 20px;
+}
+
+
+.forgot {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-family: "Minecraft Rus", sans-serif;
+  cursor: pointer;
+
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.input.error {
+  border: 2px solid red;
+}
+
+.error-text {
+  font-size: 14px;
+  font-family: "Minecraft Rus", sans-serif;
+  color: #FF2A2A;
+  text-align: left;
+    margin-top: 5px; /* 👈 вот это опускает текст */
+
+}
+
+.submit-btn {
+  width: 70%;
+  height: 60px;
+
+  font-family: "Minecraft Rus", sans-serif;
+  font-size: 20px;
+
+  border-radius: 10px;
+  border: 2px solid #000;
+
+  background: linear-gradient(180deg, #7F7663, #968E7D);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+.switch {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Minecraft Rus", sans-serif;
+  cursor: default;
+}
+
+.switch-link {
+  color: #FF2A2A;
+  cursor: pointer;
+}
+
+.switch-link:hover {
+  text-decoration: underline;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+}
