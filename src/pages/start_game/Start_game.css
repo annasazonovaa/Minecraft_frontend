@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Minecraft Rus';
+  src: url('./fonts/MinecraftRus.ttf') format('truetype');
+}
+
+.Start_game {
+  text-align: center;
+  background-image: url('./background.png');
+  font-family: 'Minecraft Rus', serif;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #C2B791;
+  padding: 40px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.card button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Minecraft Rus', serif;
+}
+
+.card ol {
+  margin-top: 5%;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.card li {
+  margin-bottom: 2%;
+  font-size: 24px;
+}
