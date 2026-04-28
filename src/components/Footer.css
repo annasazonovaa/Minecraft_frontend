@@ -1,0 +1,24 @@
+.footer{
+    background-color: #282828;
+    border-top: 8px solid #473F3F;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+  
+}
+
+.nav a{
+    font-family: Minecraft Rus, serif;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-top: 31px;
+    padding-right: 10%;
+    text-decoration: none;
+    display: inline-block;
+    
+    
+}
+
+#Contacts {
+    margin-left: 4%;
+}
