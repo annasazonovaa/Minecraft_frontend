@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import discordIcon from './Assets/discordIcon.svg';
 import homePageIcon from './Assets/homePageIcon.svg';
 import profileIcon from './Assets/profileIcon.svg';
@@ -9,37 +10,28 @@ import wikiIcon from './Assets/wikiIcon.svg';
 import './Header.css';
 import Button from './headerButton';
 
+const Header = ({ onProfileClick }) => {
+  const navigate = useNavigate();
 
-
-const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
         <div className="header-left">
           <div className="header-icon telegram-icon">
-            <img 
-              src={telegramIcon} 
-              alt="Telegram" 
-            />
+            <img src={telegramIcon} alt="Telegram" />
           </div>
           <div className="header-icon discord-icon">
-            <img 
-              src={discordIcon} 
-              alt="Discord" 
-            />
+            <img src={discordIcon} alt="Discord" />
           </div>
           <div className="header-icon tiktok-icon">
-            <img 
-              src={tiktokIcon} 
-              alt="TikTok" 
-            />
+            <img src={tiktokIcon} alt="TikTok" />
           </div>
         </div>
         
         <div className="header-buttons">
           <Button 
             icon={<img src={homePageIcon} alt="homePage-button" />}
-            onClick={() => console.log('Главная')}
+            onClick={() => navigate("/")}
             width={191}
           >
             Главная
@@ -53,7 +45,7 @@ const Header = () => {
             Начать игру
           </Button>
 
-            <Button 
+          <Button 
             icon={<img src={wikiIcon} alt="wiki-button" />}
             onClick={() => console.log('Вики')}
             width={144}
@@ -61,18 +53,17 @@ const Header = () => {
             Вики
           </Button>
 
-            <Button 
+          <Button 
             icon={<img src={storeIcon} alt="store-button" />}
-            onClick={() => console.log('Магазин')}
+            onClick={() => navigate("/shop")}
             width={192}
           >
             Магазин
           </Button>
 
-          
           <Button 
             icon={<img src={profileIcon} alt="profile-button" />}
-            onClick={() => console.log('Профиль')}
+            onClick={onProfileClick}   // ✅ ОТКРЫТИЕ МОДАЛКИ
             width={187}
           >
             Профиль

@@ -1,0 +1,162 @@
+
+@font-face {
+  font-family: "Minecraft Rus";
+  src: url("../Components/Assets/MinecraftRus.ttf") format("truetype");}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* вместо top/left/width/height */
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+/* окно */
+.modal-content {
+  width: 750px;
+  height: 400px;        /* 👈 добавь фиксированную высоту */
+
+  background: #D6BF98;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+
+  overflow: hidden;     /* 👈 важно */
+}
+
+
+
+/* крестик */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.close-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+/* layout */
+.modal-body {
+  display: flex;
+  gap: 20px;
+}
+
+/* правая часть */
+.modal-right {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  padding-top: 20px;   /* 👈 вот это */
+  padding-bottom: 20px; /* (чтобы симметрия была как слева) */
+  box-sizing: border-box;
+}
+
+
+.modal-right .buy-btn {
+  align-self: flex-end;
+
+  width: 150px;
+  height: 45px;    /* меньше */
+  font-size: 14px;  /* компактнее */
+}
+
+.modal-description {
+  width: 100%;   /* вместо 450px */
+
+  margin: 0 auto;
+  height: 240px;
+
+  background: #EEE8D0;
+  border: 2px solid #676767;
+  border-radius: 5px;
+
+  padding-right: 16px;
+  scrollbar-gutter: stable;
+
+  box-sizing: border-box;
+
+  overflow-y: auto;
+
+  font-size: 14px;
+  font-family: "Minecraft Rus", sans-serif;
+  cursor: default;
+
+  text-align: left;   /* ⭐ прижать текст влево */
+  line-height: 1.25;   /* ⭐ расстояние между строками */
+  padding: 10px;      /* чтобы текст не прилипал к рамке */
+}
+
+.modal-description::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-description::-webkit-scrollbar-track {
+  background: #DBD1C1;
+  border-radius: 10px;
+}
+
+.modal-description::-webkit-scrollbar-thumb {
+  background: #908777;
+  border-radius: 10px;
+}
+
+.modal-description::-webkit-scrollbar-thumb:hover {
+  background: #7e7566;
+}
+
+.modal-description {
+  white-space: pre-wrap;
+}
+
+.modal-left {
+  width: 260px;
+
+  display: flex;
+  justify-content: flex-start;  /* было center */
+  align-items: flex-start;      /* было center */
+
+  padding: 20px;                /* 👈 вот ключ */
+  box-sizing: border-box;
+}
+
+.modal-left .card {
+  width: 210px;
+  height: 320px;
+  
+}
+
+.modal-left .card-image img{
+  width: 150px;
+  height: 150px;
+
+  
+}
+
+.modal-left .card-title {
+  font-family: "Minecraft Rus", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0px;
+}
+.modal-left .buy-btn {
+  width: 150px;
+  height: 45px;
+  font-size: 14px;
+}

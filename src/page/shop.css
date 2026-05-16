@@ -1,0 +1,189 @@
+/* === ШРИФТ === */
+@font-face {
+  font-family: "Minecraft Rus";
+  src: url("../Components/Assets/MinecraftRus.ttf") format("truetype");
+}
+
+/* === СТРАНИЦА === */
+.shop-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-image: url("../Components/Assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.shop-container {
+  width: 90%;
+  margin-top: 40px;
+  padding: 40px;
+
+  position: relative;
+  box-sizing: border-box;
+
+  z-index: 1;
+}
+
+.shop-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../Components/Assets/shopBackground2.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+.shop-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -50px; /* 👈 ВОТ ЭТО 50px ПЕРЕКРЫТИЕ */
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("../Components/Assets/shopBackground.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+/* === ЗАГОЛОВОК === */
+.shop-title {
+  font-family: "Minecraft Rus", sans-serif;
+  font-size: 40px;
+  text-align: center;
+    margin-top: 70px;
+
+  margin-bottom: 20px;
+}
+
+/* === ПОДЗАГОЛОВКИ === */
+.section-title {
+  font-family: "Minecraft Rus", sans-serif;
+  font-size: 32px;
+  margin: 40px 0 30px;
+}
+
+/* === СЕТКА (ИСПРАВЛЕНО) === */
+.items-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 40px;
+
+  justify-content: center;
+}
+
+/* === КАРТОЧКА === */
+.card {
+  width: 250px;
+  height: 390px;
+
+  background: #EEE8D0;
+  border: 2px solid #676767;
+  border-radius: 5px;
+
+  padding: 15px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  transition: transform 0.2s;
+
+  position: relative;
+  z-index: 1;
+
+  cursor: pointer; /* ⭐ ВАЖНО */
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* === ЗОНА КЛИКА (ВАЖНО) === */
+.card-click {
+  cursor: pointer;
+  width: 100%;
+  flex: 1;
+}
+
+/* === КАРТИНКА === */
+.card-image {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-image img {
+  width: 180px;
+  height: 180px;
+  margin-top: 15px;
+
+  object-fit: contain;
+}
+/* === НАЗВАНИЕ === */
+.card-title {
+  font-family: "Minecraft Rus", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+.buy-btn {
+  width: 180px;
+  height: 50px;
+
+  background: #2FC734;
+
+  border-top: 2px solid #0C6E10;
+  border-left: 2px solid #0C6E10;
+  border-right: 2px solid #0C6E10;
+  border-bottom: 5px solid #0C6E10; /* 👈 толще снизу */
+
+border-radius: 8px;
+
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Minecraft Rus", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+
+  transition: 0.2s;
+
+  margin-bottom: 20px;
+}
+.buy-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === MODAL FIX (очень важно) === */
+.modal-overlay {
+  z-index: 9999;
+}
